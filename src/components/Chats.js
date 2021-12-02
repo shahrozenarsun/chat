@@ -4,8 +4,6 @@ import { AiOutlineCheck } from 'react-icons/ai';
 
 const Chats = (props) => {
 
-    console.log(props)
-
     const [selected, setSelected] = useState(false);
 
     useEffect(() => {
@@ -33,9 +31,9 @@ const Chats = (props) => {
                                 margin: 'auto'
                             }}
                         />
-                        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%" }}>
-                            <p style={{ fontWeight: 'bold' }}>Hamza</p>
-                            <p style={{ color: "#B6C1D4" }}>033000005522</p>
+                        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
+                            <p style={{ fontWeight: 'bold', position: 'absolute' }}>Hamza</p>
+                            <p style={{ color: "#B6C1D4", position: 'absolute', top: "40%" }}>033000005522</p>
                         </div>
                     </div>
                     <div style={{
