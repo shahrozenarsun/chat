@@ -36,6 +36,17 @@ const useStyles = makeStyles({
       backgroundColor: "#DCECEE",
     },
   },
+  pillEmpty: {
+    margin: 0,
+    // cursor: 'pointer',
+    padding: '1%',
+    height: '5px',
+    backgroundColor: "#F3F5F9",
+    borderRadius: "0px 0px 10px 10px"
+    // '&:hover': {
+    //   backgroundColor: "#DCECEE",
+    // },
+  },
   message: {
     width: '45%',
     backgroundColor: '#F3F5F9',
@@ -66,32 +77,34 @@ const Main = () => {
                 </div>
                 <div style={{ width: "90%", margin: 'auto' }}>
                   <div style={{ padding: '0 2%' }}>
-                    <h3>Include Tags</h3>
+                    <h3>Include Tags:</h3>
                     <div style={{ borderRadius: '15px' }}>
-                      <p className={classes.pillOne}>Greetings</p>
+                      <p className={classes.pillOne} style={{ borderRadius: "10px 10px 0px 0px" }}>Greetings</p>
                       <p className={classes.pillTwo}>Greetings</p>
                       <p className={classes.pillOne}>Greetings</p>
                       <p className={classes.pillTwo}>Greetings</p>
+                      <p className={classes.pillEmpty}></p>
                     </div>
                   </div>
                   <div style={{ padding: '0 2%' }}>
-                    <h3>Exclude Tags</h3>
+                    <h3>Exclude Tags:</h3>
                     <div style={{ borderRadius: '15px' }}>
-                      <p className={classes.pillOne}>Greetings</p>
+                      <p className={classes.pillOne} style={{ borderRadius: "10px 10px 0px 0px" }}>Greetings</p>
                       <p className={classes.pillTwo}>Greetings</p>
                       <p className={classes.pillOne}>Greetings</p>
                       <p className={classes.pillTwo}>Greetings</p>
+                      <p className={classes.pillEmpty}></p>
                     </div>
                   </div>
                   <div style={{ padding: '0 2%' }}>
-                    <h3>Message Sent</h3>
+                    <h3>Message Sent:</h3>
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                       <TextField placeholder="min" id="outlined-basic" variant="outlined" className={classes.message} />
                       <TextField placeholder="max" id="outlined-basic" variant="outlined" className={classes.message} />
                     </div>
                   </div>
                   <div style={{ padding: '0 2%' }}>
-                    <h3>Message Received</h3>
+                    <h3>Message Received:</h3>
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                       <TextField placeholder="min" id="outlined-basic" variant="outlined" className={classes.message} />
                       <TextField placeholder="max" id="outlined-basic" variant="outlined" className={classes.message} />
@@ -123,7 +136,7 @@ const Main = () => {
             </div>
             <TextField placeholder="Search Contacts" id="outlined-basic" variant="outlined" style={{ width: '95%', backgroundColor: '#F3F5F9', color: '#DEE3ED' }} />
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '95%' }}>
-              <div style={{ display: 'flex', flexDirection: 'row' }}>
+              <div style={{ display: 'flex', flexDirection: 'row', paddingTop: '2%' }}>
                 <Button
                   onClick={selectAllContacts}
                   style={{
@@ -139,7 +152,7 @@ const Main = () => {
                 }} variant="contained">Export All</Button>
               </div>
             </div>
-            <div style={{ overflow: 'auto', height: '630px' }}>
+            <div style={{ overflow: 'auto', height: '680px' }}>
               <h3>A</h3>
               <Chats selectAll={selectAll} />
               <Chats selectAll={selectAll} />

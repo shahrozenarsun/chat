@@ -14,7 +14,7 @@ const Chats = (props) => {
 
     return (
         <div>
-            <div style={{ display: 'flex', flexDirection: 'row', width: '95%', borderBottom: '1px solid lightgray', position: 'relative', margin: '1% 0%' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', width: '95%', position: 'relative', margin: '1% 0%' }}>
                 <Button
                     onClick={() => setSelected(!selected)}
                     style={{
@@ -33,7 +33,7 @@ const Chats = (props) => {
                                 margin: 'auto'
                             }}
                         />
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%" }}>
                             <p style={{ fontWeight: 'bold' }}>Hamza</p>
                             <p style={{ color: "#B6C1D4" }}>033000005522</p>
                         </div>
