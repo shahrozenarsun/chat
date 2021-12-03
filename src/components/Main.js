@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Chats from "./Chats";
 import makeStyles from '@mui/styles/makeStyles';
-
+import './chat.css';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -18,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   pillOne: {
     margin: 0,
     cursor: 'pointer',
@@ -51,8 +51,13 @@ const useStyles = makeStyles({
     width: '45%',
     backgroundColor: '#F3F5F9',
     color: '#DEE3ED',
+  },
+  messageCounter: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   }
-});
+}));
 
 const Main = () => {
   const classes = useStyles();
@@ -98,14 +103,14 @@ const Main = () => {
                   </div>
                   <div style={{ padding: '0 2%' }}>
                     <h3>Message Sent:</h3>
-                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <div className={classes.messageCounter}>
                       <TextField placeholder="min" id="outlined-basic" variant="outlined" className={classes.message} />
                       <TextField placeholder="max" id="outlined-basic" variant="outlined" className={classes.message} />
                     </div>
                   </div>
                   <div style={{ padding: '0 2%' }}>
                     <h3>Message Received:</h3>
-                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <div className={classes.messageCounter}>
                       <TextField placeholder="min" id="outlined-basic" variant="outlined" className={classes.message} />
                       <TextField placeholder="max" id="outlined-basic" variant="outlined" className={classes.message} />
                     </div>

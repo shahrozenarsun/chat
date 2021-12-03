@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import { AiOutlineCheck } from 'react-icons/ai';
+import './chat.css';
+
 
 const Chats = (props) => {
 
