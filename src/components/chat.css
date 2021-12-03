@@ -1,3 +1,18 @@
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
   height: 0.4375em !important;
+  border-radius: 68px !important;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  border-radius: 68px !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 68px !important;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  padding: 0 !important;
+  height: 30px !important;
+  min-width: 30px !important;
 }

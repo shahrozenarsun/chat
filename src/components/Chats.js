@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import { AiOutlineCheck } from 'react-icons/ai';
-import './chat.css';
-
 
 const Chats = (props) => {
 
@@ -33,7 +31,7 @@ const Chats = (props) => {
                                 margin: 'auto'
                             }}
                         />
-                        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', paddingLeft: "20%" }}>
                             <p style={{ fontWeight: 'bold', position: 'absolute' }}>Hamza</p>
                             <p style={{ color: "#B6C1D4", position: 'absolute', top: "40%" }}>033000005522</p>
                         </div>

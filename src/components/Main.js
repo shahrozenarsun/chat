@@ -56,7 +56,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-  }
+  },
+  noBorder: {
+    border: "none",
+  },
 }));
 
 const Main = () => {
@@ -72,12 +75,14 @@ const Main = () => {
     <div>
       <Box>
         <Grid container spacing={2}>
-          <Grid item xs={4} style={{ position: 'relative' }}>
+          <Grid item xs={3} style={{ position: 'relative' }}>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '90%' }}>
+                <div style={{
+                  display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: "84%", marginLeft: "7%"
+                }}>
                   <span style={{ fontSize: '30px', height: '30px', cursor: 'pointer', margin: "auto 0" }}><CgMenuRight style={{ transform: "rotateX(180deg)" }} /></span>
-                  <h2 style={{ marginLeft: '-40%' }}>Audience</h2>
+                  <h2 style={{ marginLeft: '-20%' }}>Audience</h2>
                   <h3 style={{ margin: "auto 0", color: "#F3F5F9" }}>100 Contacts</h3>
                 </div>
                 <div style={{ width: "90%", margin: 'auto' }}>
@@ -104,15 +109,47 @@ const Main = () => {
                   <div style={{ padding: '0 2%' }}>
                     <h3>Message Sent:</h3>
                     <div className={classes.messageCounter}>
-                      <TextField placeholder="min" id="outlined-basic" variant="outlined" className={classes.message} />
-                      <TextField placeholder="max" id="outlined-basic" variant="outlined" className={classes.message} />
+                      <TextField
+                        placeholder="min"
+                        id="outlined-basic"
+                        variant="outlined"
+                        className={classes.message}
+                        InputProps={{
+                          classes: { notchedOutline: classes.noBorder }
+                        }}
+                      />
+                      <TextField
+                        placeholder="max"
+                        id="outlined-basic"
+                        variant="outlined"
+                        className={classes.message}
+                        InputProps={{
+                          classes: { notchedOutline: classes.noBorder }
+                        }}
+                      />
                     </div>
                   </div>
                   <div style={{ padding: '0 2%' }}>
                     <h3>Message Received:</h3>
                     <div className={classes.messageCounter}>
-                      <TextField placeholder="min" id="outlined-basic" variant="outlined" className={classes.message} />
-                      <TextField placeholder="max" id="outlined-basic" variant="outlined" className={classes.message} />
+                      <TextField
+                        placeholder="min"
+                        id="outlined-basic"
+                        variant="outlined"
+                        className={classes.message}
+                        InputProps={{
+                          classes: { notchedOutline: classes.noBorder }
+                        }}
+                      />
+                      <TextField
+                        placeholder="max"
+                        id="outlined-basic"
+                        variant="outlined"
+                        className={classes.message}
+                        InputProps={{
+                          classes: { notchedOutline: classes.noBorder }
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -124,14 +161,14 @@ const Main = () => {
               }}>
                 <Button style={{
                   backgroundColor: "#09A391", borderRadius: '10px', height: "40px",
-                  minWidth: "90%", textTransform: 'capitalize', marginLeft: '9%'
+                  width: "90%", textTransform: 'capitalize', marginLeft: '6%'
                 }} variant="contained">Save Filters</Button>
               </div>
             </div>
 
 
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={9}>
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '95%' }}>
               <h1>All Contacts (100)</h1>
               <Button style={{
@@ -148,12 +185,12 @@ const Main = () => {
                     backgroundColor: "#B3BFD2", borderRadius: '35px', height: "40px",
                     minWidth: "10px", margin: 'auto'
                   }} variant="contained"><AiOutlineCheck style={{ backgroundColor: "color" }} /></Button>
-                <h4 style={{ paddingLeft: "24%", margin: "0" }}>Select All</h4>
+                <h4 style={{ paddingLeft: "24%", margin: "0", whiteSpace: 'nowrap' }}>Select All</h4>
               </div>
               <div style={{ margin: "auto 0" }}>
                 <Button style={{
-                  backgroundColor: "#09A391", borderRadius: '10px', height: "40px",
-                  minWidth: "10px", textTransform: 'capitalize'
+                  backgroundColor: "#09A391", borderRadius: '5px', height: "40px",
+                  minWidth: "10px", textTransform: 'capitalize', width: "87px",
                 }} variant="contained">Export All</Button>
               </div>
             </div>
